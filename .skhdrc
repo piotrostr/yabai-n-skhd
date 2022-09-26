@@ -1,0 +1,41 @@
+# bind arrows to j and k
+cmd - j : skhd -k "down"
+cmd - k : skhd -k "up"
+cmd - h : skhd -k "left"
+cmd - l : skhd -k "right"
+
+# open terminal
+cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+
+# focus window (dont really need it these days, arrows are more important)
+ctrl + cmd - h : yabai -m window --focus west
+ctrl + cmd - l : yabai -m window --focus east
+
+# move window, change desktop if no window
+shift + cmd - h : yabai -m window --warp west
+shift + cmd - j : yabai -m window --warp sout
+shift + cmd - k : yabai -m window --warp nort
+shift + cmd - l : yabai -m window --warp east
+
+# move window to given desktop and move focus
+shift + cmd - 1 : yabai -m window --space 1
+shift + cmd - 2 : yabai -m window --space 2
+shift + cmd - 3 : yabai -m window --space 3
+shift + cmd - 4 : yabai -m window --space 4
+shift + cmd - 5 : yabai -m window --space 5
+
+# delete current desktop
+shift + cmd - 0x29 : yabai -m space --destroy
+
+# go to desktop
+cmd - 1 : yabai -m space --focus 1
+cmd - 2 : yabai -m space --focus 2
+cmd - 3 : yabai -m space --focus 3
+cmd - 4 : yabai -m space --focus 4
+cmd - 5 : yabai -m space --focus 5
+cmd - 6 : yabai -m space --focus 6
+
+# rotate
+shift + cmd - r: yabai -m space --rotate 90
+
+# WIN_ID=$(yabai -m query --windows --window | jq '.id') && yabai -m window --display recent && yabai -m window --focus $WIN_ID
