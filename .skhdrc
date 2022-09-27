@@ -28,12 +28,14 @@ shift + cmd - 5 : yabai -m window --space 5
 shift + cmd - 0x29 : yabai -m space --destroy
 
 # go to desktop
-cmd - 1 : yabai -m space --focus 1
-cmd - 2 : yabai -m space --focus 2
-cmd - 3 : yabai -m space --focus 3
-cmd - 4 : yabai -m space --focus 4
-cmd - 5 : yabai -m space --focus 5
-cmd - 6 : yabai -m space --focus 6
+# the below requires enabling some stuff in secure boot etc
+# not relevant for my current usage (one desktop is all you need)
+# cmd - 1 : yabai -m space --focus 1
+# cmd - 2 : yabai -m space --focus 2
+# cmd - 3 : yabai -m space --focus 3
+# cmd - 4 : yabai -m space --focus 4
+# cmd - 5 : yabai -m space --focus 5
+# cmd - 6 : yabai -m space --focus 6
 
 # rotate
 shift + cmd - r: yabai -m space --rotate 90
